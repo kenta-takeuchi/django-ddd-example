@@ -1,0 +1,23 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "==4.1"
+djangorestframework = "==3.14"
+django-environ = "==0.9"
+install = "*"
+flake8 = "==5.0.4"
+autopep8 = "==2.0.0"
+pycodestyle = "==2.9.1"
+
+[dev-packages]
+
+[requires]
+python_version = "3.10"
+
+[scripts]
+start = "python manage.py runserver"
+check = "pycodestyle ."
+format = "autopep8 --in-place --recursive ."
