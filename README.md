@@ -4,6 +4,7 @@
 # pipenvをinstallしていない方は下記のコマンドを実行
 pip install pipenv
 
-pipenv shell
 pipenv install
+pipenv run migrate
+pipenv run start
 ```

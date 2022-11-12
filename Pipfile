@@ -19,5 +19,7 @@ python_version = "3.10"
 
 [scripts]
 start = "python manage.py runserver"
+migrate = "python manage.py migrate"
+makemigrations = "python manage.py makemigrations"
 check = "pycodestyle ."
 format = "autopep8 --in-place --recursive ."
