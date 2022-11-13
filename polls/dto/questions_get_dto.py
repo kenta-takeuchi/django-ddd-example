@@ -1,15 +1,16 @@
 from dataclasses import dataclass
-
 from typing import List
 
+from share.base.dto import Dto
 
-@dataclass(frozen=True)
-class QuestionDto:
+
+@dataclass
+class QuestionDto(Dto):
     id: int
     question_text: str
     pub_date: str
 
 
-@dataclass(frozen=True)
-class QuestionsGetDto:
+@dataclass
+class QuestionsGetDto(Dto):
     questions: List[QuestionDto]

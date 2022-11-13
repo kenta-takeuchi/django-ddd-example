@@ -4,7 +4,6 @@ from share.base.model import UUIDModel
 
 
 class Question(UUIDModel):
-    id = models.UUIDField(primary_key=True, editable=False)
     question_text = models.CharField(max_length=200)
     pub_date = models.DateTimeField('date published', auto_now_add=True)
 
@@ -13,7 +12,6 @@ class Question(UUIDModel):
 
 
 class Choice(UUIDModel):
-    id = models.UUIDField(primary_key=True, editable=False)
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
     choice_text = models.CharField(max_length=200)
     votes = models.IntegerField(default=0)
